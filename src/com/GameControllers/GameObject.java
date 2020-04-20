@@ -3,6 +3,7 @@ package com.GameControllers;
 import java.awt.image.BufferedImage;
 
 public interface GameObject {
+
     /*
      * @return the type of game object
      */
@@ -51,6 +52,5 @@ public interface GameObject {
     sliced and one when it is not.
     */
     public BufferedImage[] getBufferedImages ();
-
 
 }

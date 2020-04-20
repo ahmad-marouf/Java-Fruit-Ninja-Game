@@ -1,6 +1,7 @@
 package com.GameControllers;
 
 public interface GameActions {
+
     /*
      *@return created game object
      */
@@ -20,8 +21,10 @@ public interface GameActions {
      */
     public void saveGame ();
     /*
+<<<<<<< HEAD
      *loads the last saved state of the game
      */
+
     public void loadGame ();
     /*
      *resets the game to its initial state
