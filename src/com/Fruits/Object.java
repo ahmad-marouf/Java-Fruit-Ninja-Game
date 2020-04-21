@@ -5,7 +5,7 @@ import com.GameControllers.GameObject;
 
 import java.awt.image.BufferedImage;
 
-public abstract class Fruit implements GameObject {
+public abstract class Object implements GameObject {
    protected int points;
    protected ENUM type;
    protected int xLocation;

@@ -18,6 +18,10 @@ public class ObjectFactory {
             return new Strawberry();
         else if (objectType == ENUM.WATERMELON)
             return new Watermelon();
+        else if (objectType == ENUM.FATAL)
+            return new FatalBomb();
+        else if (objectType == ENUM.DANGEROUS)
+            return new DangerousBomb();
         return null;
     }
 }
