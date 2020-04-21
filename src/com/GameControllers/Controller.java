@@ -1,5 +1,7 @@
 package com.GameControllers;
 
+import com.Fruits.Object;
+
 import java.util.Random;
 
 public class Controller implements GameActions {
@@ -38,6 +40,8 @@ public class Controller implements GameActions {
 
     @Override
     public void updateObjectsLocations() {
+        GameObject gameObject=createGameObject();
+        gameObject.move(5);
 
     }
 

@@ -11,8 +11,8 @@ public abstract class Object implements GameObject {
    protected int xLocation;
    protected int yLocation;
    protected int Height;
-   protected int V1;
-   protected int V2;
+   protected int Vi;
+   protected int Vf;
    protected boolean Sliced;
    protected boolean MovedOffScreen;
    protected BufferedImage[] bufferedImages;
@@ -40,12 +40,12 @@ public abstract class Object implements GameObject {
 
    @Override
    public int getInitialVelocity() {
-      return V1;
+      return Vi;
    }
 
    @Override
    public int getFallingVelocity() {
-      return V2;
+      return Vf;
    }
 
    @Override
@@ -65,11 +65,16 @@ public abstract class Object implements GameObject {
 
    @Override
    public void move(double time) {
-
+   double TimeOfMaxHeight =Height/Vi;
+   if(time<TimeOfMaxHeight)
+      yLocation+=Vi*time;
+   else if(time>TimeOfMaxHeight)
+      yLocation+=Vf*time;
    }
 
    @Override
    public BufferedImage[] getBufferedImages() {
-      return new BufferedImage[0];
+      return new BufferedImage[0];0
    }
+
 }
