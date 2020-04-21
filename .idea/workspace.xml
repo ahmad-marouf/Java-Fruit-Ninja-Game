@@ -1,78 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19af7c6e-dc03-4ae4-9a39-e728875ac20e" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/com/Fruits/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Fruits/Fruit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Fruits/Orange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Fruits/Pineapple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Fruits/Strawberry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Fruits/Watermelon.java" afterDir="false" />
+    <list default="true" id="6a02cc61-efa3-4025-9c84-259d552edaec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Fruit Ninja Game.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/GameControllers/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/GameControllers/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameControllers/ENUM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameControllers/ENUM.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/com/GameControllers/GameActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/GameControllers/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> a0a2040ede8e76e636821cb47c914386be0f54e6
+      <change beforePath="$PROJECT_DIR$/Fruit Ninja.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja/com/GUI/MainMenu.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-<<<<<<< HEAD
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
-=======
-        <option value="Interface" />
->>>>>>> a0a2040ede8e76e636821cb47c914386be0f54e6
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1aRla4bmx2gtYKQA1kREJriKygg" />
-<<<<<<< HEAD
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-=======
->>>>>>> a0a2040ede8e76e636821cb47c914386be0f54e6
+  <component name="ProjectId" id="1ar8OB70UZCBNE8rMhkbrV2ipsY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
-<<<<<<< HEAD
-=======
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
->>>>>>> a0a2040ede8e76e636821cb47c914386be0f54e6
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.GUI.MainMenu" />
-      <module name="Fruit Ninja" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <module name="Fruit Ninja Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -81,61 +63,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19af7c6e-dc03-4ae4-9a39-e728875ac20e" name="Default Changelist" comment="" />
-      <created>1586706346727</created>
+      <changelist id="6a02cc61-efa3-4025-9c84-259d552edaec" name="Default Changelist" comment="" />
+      <created>1587482317916</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1586706346727</updated>
+      <updated>1587482317916</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-<<<<<<< HEAD
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1587324890597">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1587482412070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587324890597" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587394954709">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587394954709" />
-=======
-    <state x="361" y="70" key="#Project_Structure" timestamp="1586722014973">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1586722014973" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1586707998981">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586707998981" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1586722141972">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1586722141972" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586724228901">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586724228901" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586724228901">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586724228901" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586724228901">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586724228901" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586724228901">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586724228901" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586722141972">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1586722141972" />
-    <state x="209" y="32" key="new project wizard" timestamp="1587126751174">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="209" y="32" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1587126751174" />
->>>>>>> a0a2040ede8e76e636821cb47c914386be0f54e6
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587482412070" />
   </component>
 </project>
