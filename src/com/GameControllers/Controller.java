@@ -6,29 +6,29 @@ public class Controller implements GameActions {
 
     @Override
     public GameObject createGameObject() {
-        Random random = new Random(7);
+        Random random = new Random();
         ObjectFactory factory = new ObjectFactory();
         GameObject gameObject= null;
-        switch (random.nextInt()) {
-            case '1':
+        switch (random.nextInt(ENUM.values().length)) {
+            case 1:
                gameObject = factory.getGameObject(ENUM.APPLE);
                 break;
-            case '2':
+            case 2:
                 gameObject = factory.getGameObject(ENUM.ORANGE);
                 break;
-            case '3':
+            case 3:
                 gameObject = factory.getGameObject(ENUM.STRAWBERRY);
                 break;
-            case '4':
+            case 4:
                 gameObject = factory.getGameObject(ENUM.WATERMELON);
                 break;
-            case '5':
+            case 5:
                 gameObject = factory.getGameObject(ENUM.PINEAPPLE);
                 break;
-            case '6':
+            case 6:
                 gameObject = factory.getGameObject(ENUM.FATAL);
                 break;
-            case '7':
+            case 7:
                 gameObject = factory.getGameObject(ENUM.DANGEROUS);
                 break;
 

@@ -16,8 +16,6 @@ public class MainMenu extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Controller controller = new Controller();
-        GameObject gameObject = controller.createGameObject();
-        //System.out.println(gameObject.getObjectType().toString());
+       
     }
 }
