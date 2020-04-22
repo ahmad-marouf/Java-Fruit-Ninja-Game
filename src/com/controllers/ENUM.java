@@ -1,4 +1,4 @@
-package com.GameControllers;
+package com.controllers;
 
 public enum ENUM {
     APPLE,ORANGE,STRAWBERRY,WATERMELON,PINEAPPLE,FATAL,DANGEROUS;

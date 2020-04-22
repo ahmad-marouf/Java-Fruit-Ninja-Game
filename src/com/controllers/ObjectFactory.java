@@ -1,9 +1,8 @@
-package com.GameControllers;
+package com.controllers;
 
-import com.Fruits.*;
+import com.objects.*;
 
 public class ObjectFactory {
-
 
     public GameObject getGameObject(ENUM objectType) {
         if (objectType == null)

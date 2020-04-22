@@ -1,16 +1,14 @@
-package com.GameControllers;
-
-import com.Fruits.Object;
+package com.controllers;
 
 import java.util.Random;
 
-public class Controller implements GameActions {
+public class GameController implements GameActions {
 
     @Override
     public GameObject createGameObject() {
         Random random = new Random();
         ObjectFactory factory = new ObjectFactory();
-        GameObject gameObject= null;
+        GameObject gameObject = null;
         switch (random.nextInt(ENUM.values().length)) {
             case 1:
                gameObject = factory.getGameObject(ENUM.APPLE);
@@ -40,14 +38,17 @@ public class Controller implements GameActions {
 
     @Override
     public void updateObjectsLocations() {
-        GameObject gameObject=createGameObject();
+        // get objects list from game gui
+        GameObject gameObject = createGameObject();
         gameObject.move(5);
 
     }
 
     @Override
     public void sliceObjects() {
-
+        // get objects list from game gui
+        GameObject gameObject = createGameObject();
+        gameObject.slice();
     }
 
     @Override

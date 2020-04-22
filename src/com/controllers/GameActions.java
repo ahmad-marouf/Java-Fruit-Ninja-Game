@@ -1,4 +1,4 @@
-package com.GameControllers;
+package com.controllers;
 
 public interface GameActions {
 
