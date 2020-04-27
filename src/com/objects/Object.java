@@ -18,6 +18,7 @@ public abstract class Object implements GameObject {
    private boolean movedOffScreen;
    private BufferedImage[] bufferedImages;
 
+   
    public Object(ENUM objectType, int points) {
       this.points = points;
       this.objectType = objectType;
