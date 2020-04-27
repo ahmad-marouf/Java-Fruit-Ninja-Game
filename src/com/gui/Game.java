@@ -59,6 +59,7 @@ public class Game {
             imageList.add(imageView);
             objectList.add(gameObject);
         }));
+        timeline.setCycleCount(100);
         timeline.play();
         labelPane.getChildren().addAll(imageList);
 

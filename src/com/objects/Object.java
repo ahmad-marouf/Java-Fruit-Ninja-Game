@@ -3,7 +3,10 @@ package com.objects;
 import com.controllers.ENUM;
 import com.controllers.GameObject;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public abstract class Object implements GameObject {
 
@@ -30,6 +33,13 @@ public abstract class Object implements GameObject {
       this.sliced = false;
       this.movedOffScreen = false;
       this.bufferedImages = new BufferedImage[2];
+
+      try {
+         bufferedImages[0] = ImageIO.read(new File("Images\\" + objectType + ".png"));
+         bufferedImages[1] = ImageIO.read(new File("Images\\Sliced" + objectType + ".png"));
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
    }
 
    @Override
