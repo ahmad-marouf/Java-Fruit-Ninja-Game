@@ -34,8 +34,8 @@ public abstract class Object implements GameObject {
       this.xLocation = random.nextInt((int) game.getGameScene().getWidth() - 50);
       this.yLocation = (int) game.getGameScene().getHeight();
       this.maxHeight = (int) (game.getGameScene().getHeight() - 60);
-      this.initialVelocity = -5;
-      this.fallingVelocity = 5;
+      this.initialVelocity = 5;
+      this.fallingVelocity = -5;
       this.sliced = false;
       this.movedOffScreen = false;
       this.bufferedImages = new BufferedImage[2];
@@ -85,12 +85,12 @@ public abstract class Object implements GameObject {
 
    @Override
    public void move(double time) {
-      double timeOfMaxHeight = -(maxHeight/initialVelocity);
+      double timeOfMaxHeight = maxHeight/initialVelocity;
       double deltaTime = time - timeCreated;
       if(deltaTime <= timeOfMaxHeight)
-         yLocation = (maxHeight + 60) + (int) (initialVelocity * deltaTime);
+         yLocation = (maxHeight + 60) - (int) (initialVelocity * deltaTime);
       else if(deltaTime > timeOfMaxHeight)
-         yLocation = (int) (fallingVelocity * deltaTime) - (maxHeight - 60);
+         yLocation = (60 - maxHeight) - (int) (fallingVelocity * deltaTime) ;
    }
 
    @Override
