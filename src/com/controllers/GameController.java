@@ -1,8 +1,17 @@
 package com.controllers;
 
+import com.gui.Game;
+
+
+import com.objects.Object;
+import com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
+
+import java.util.List;
 import java.util.Random;
 
 public class GameController implements GameActions {
+
+
 
     @Override
     public GameObject createGameObject() {
@@ -39,9 +48,11 @@ public class GameController implements GameActions {
     @Override
     public void updateObjectsLocations() {
         // get objects list from game gui
-        GameObject gameObject = createGameObject();
-        gameObject.move(5);
-
+        Game game=Game.getInstance();
+        for(GameObject gameObject: game.getGameObjectList())
+        {
+            gameObject.move(game.getTime());
+        }
     }
 
     @Override

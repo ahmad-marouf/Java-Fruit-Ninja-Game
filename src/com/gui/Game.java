@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import static java.util.Collections.list;
 import java.util.List;
+
+
+import com.objects.Object;
+import javafx.animation.Animation;
+import javafx.animation.AnimationTimer;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.embed.swing.SwingFXUtils;
@@ -20,10 +25,30 @@ import javafx.util.Duration;
 public class Game {
 
     private List<ImageView> imageList = new ArrayList<>();
-    private List<Object> objectList = new ArrayList<>();
+    private List<GameObject> gameObjectList = new ArrayList<>();
     private GameObject gameObject;
     private int time;
-    
+    private static Game instance;
+
+    private Game() {
+        this.instance = instance;
+        this.time = time;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public static Game getInstance() {
+        if (instance==null)
+            instance = new Game();
+        return instance;
+    }
+
+    public List<GameObject> getGameObjectList() {
+        return gameObjectList;
+    }
+
     public void startGame(Stage primaryStage) {
         double falling;
         Scene gameScene;
@@ -49,6 +74,7 @@ public class Game {
         falling = 1000;
         time = 0;
         GameController gameController = new GameController();
+
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(falling), e -> {
             time+=falling/1000;
             timeLabel.setText("Time: "+ time);
@@ -57,8 +83,23 @@ public class Game {
             imageView.setLayoutX(gameObject.getXlocation());
             imageView.setLayoutY(gameObject.getYlocation());
             imageList.add(imageView);
-            objectList.add(gameObject);
+            gameObjectList.add(gameObject);
         }));
+
+        AnimationTimer timer=new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                int i =0;
+                gameController.updateObjectsLocations();
+                for(GameObject gameObject:gameObjectList)
+                {
+                    imageList.get(i).setLayoutY(gameObject.getYlocation());
+                    i++;
+                }
+
+            }
+        };
+
         timeline.setCycleCount(100);
         timeline.play();
         labelPane.getChildren().addAll(imageList);
