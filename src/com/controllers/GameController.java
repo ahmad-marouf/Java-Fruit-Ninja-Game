@@ -18,7 +18,7 @@ public class GameController implements GameActions {
         Random random = new Random();
         ObjectFactory factory = new ObjectFactory();
         GameObject gameObject = null;
-        switch (random.nextInt(ENUM.values().length)) {
+        switch (random.nextInt(ENUM.values().length) + 1) {
             case 1:
                gameObject = factory.getGameObject(ENUM.APPLE);
                 break;
@@ -51,15 +51,23 @@ public class GameController implements GameActions {
         Game game=Game.getInstance();
         for(GameObject gameObject: game.getGameObjectList())
         {
-            gameObject.move(game.getTime());
+            gameObject.move(game.getTimeFrames());
         }
     }
 
     @Override
     public void sliceObjects() {
-        // get objects list from game gui
-        GameObject gameObject = createGameObject();
-        gameObject.slice();
+        Game game = Game.getInstance();
+        for (GameObject gameObject : game.getGameObjectList()) {
+            if (    game.getMouseX() >= gameObject.getXlocation() &&
+                    game.getMouseX() <= (gameObject.getXlocation() + gameObject.getBufferedImages()[0].getWidth()) &&
+                    game.getMouseY() >= gameObject.getYlocation() &&
+                    game.getMouseY() <= (gameObject.getYlocation() + gameObject.getBufferedImages()[0].getHeight()) &&
+                    !gameObject.isSliced()
+            )
+                gameObject.slice();
+
+        }
     }
 
     @Override

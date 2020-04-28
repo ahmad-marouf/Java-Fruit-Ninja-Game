@@ -16,7 +16,7 @@ public class MainMenu extends Application {
         Scene menuScene = new Scene(menuButtons, 600, 600);
         primaryStage.setScene(menuScene);
         primaryStage.show();
-        Game game = new Game();
+        Game game = Game.getInstance();
         game.startGame(primaryStage);
        
     }

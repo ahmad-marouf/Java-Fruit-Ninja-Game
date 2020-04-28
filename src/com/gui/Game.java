@@ -2,18 +2,19 @@ package com.gui;
 
 import com.controllers.GameController;
 import com.controllers.GameObject;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import static java.util.Collections.list;
 import java.util.List;
 
 
-import com.objects.Object;
-import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.Cursor;
+import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -24,34 +25,18 @@ import javafx.util.Duration;
 
 public class Game {
 
+    Scene gameScene;
     private List<ImageView> imageList = new ArrayList<>();
     private List<GameObject> gameObjectList = new ArrayList<>();
-    private GameObject gameObject;
-    private int time;
+    private int timeSeconds;
+    private int timeFrames;
+    private int score;
+    private double mouseX;
+    private double mouseY;
+    private double spawnRate;
     private static Game instance;
 
-    private Game() {
-        this.instance = instance;
-        this.time = time;
-    }
-
-    public int getTime() {
-        return time;
-    }
-
-    public static Game getInstance() {
-        if (instance==null)
-            instance = new Game();
-        return instance;
-    }
-
-    public List<GameObject> getGameObjectList() {
-        return gameObjectList;
-    }
-
     public void startGame(Stage primaryStage) {
-        double falling;
-        Scene gameScene;
         Pane gameLayout = new Pane();
 
         Pane labelPane = new Pane();
@@ -71,13 +56,14 @@ public class Game {
         Pane objectPane = new Pane();
 
         //Add Create Objects every time interval and display image
-        falling = 1000;
-        time = 0;
+        spawnRate = 1000;
+        timeSeconds = 0;
+        timeFrames = 0;
         GameController gameController = new GameController();
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(falling), e -> {
-            time+=falling/1000;
-            timeLabel.setText("Time: "+ time);
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(spawnRate), e -> {
+            timeSeconds += spawnRate /1000;
+            timeLabel.setText("Time: "+ timeSeconds);
             GameObject gameObject = gameController.createGameObject();
             ImageView imageView = new ImageView(SwingFXUtils.toFXImage(gameObject.getBufferedImages()[0], null));
             imageView.setLayoutX(gameObject.getXlocation());
@@ -85,30 +71,76 @@ public class Game {
             imageList.add(imageView);
             gameObjectList.add(gameObject);
         }));
+        timeline.setCycleCount(100);
+        timeline.play();
 
-        AnimationTimer timer=new AnimationTimer() {
+        AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
+                timeFrames++;
+                scoreLabel.setText("Current Score: " + score);
+                //move imageViews on screen
                 int i =0;
                 gameController.updateObjectsLocations();
                 for(GameObject gameObject:gameObjectList)
                 {
                     imageList.get(i).setLayoutY(gameObject.getYlocation());
+                    if (gameObject.isSliced()) {
+                        imageList.get(i).setImage(SwingFXUtils.toFXImage(gameObject.getBufferedImages()[1], null));
+                    }
                     i++;
                 }
-
+                objectPane.getChildren().setAll(imageList);
+                //get slice region
+                gameScene.setOnMouseDragged(e1 -> {
+                    mouseX = e1.getX();
+                    mouseY = e1.getY();
+                    gameController.sliceObjects();
+                });
             }
         };
+        timer.start();
 
-        timeline.setCycleCount(100);
-        timeline.play();
-        labelPane.getChildren().addAll(imageList);
+        // Change cursor image
+        objectPane.setOnMousePressed(e ->{
+            try {
+                objectPane.setCursor(new ImageCursor(new Image(new FileInputStream("Images\\SHURIKEN.png"))));
+            } catch (FileNotFoundException | NullPointerException f) {
+                f.printStackTrace();
+            }
+        });
+        objectPane.setOnMouseReleased(e ->{
+            objectPane.setCursor(Cursor.DEFAULT);
+        });
 
-        //Add animate images movement
-        //Add slicing mouse handling
+        //set layouts
+        objectPane.getChildren().addAll(imageList);
         labelPane.getChildren().addAll(highScoreLabel, scoreLabel, timeLabel, livesLabel);
         gameLayout.getChildren().addAll(labelPane, objectPane);
         gameScene = new Scene(gameLayout, 600, 400);
         primaryStage.setScene(gameScene);
     }
+
+    private Game() {}
+    public static Game getInstance() {
+        if (instance==null)
+            instance = new Game();
+        return instance;
+    }
+
+    public Scene getGameScene() { return gameScene; }
+
+    public List<GameObject> getGameObjectList() { return gameObjectList; }
+
+    public int getTimeSeconds() { return timeSeconds; }
+
+    public int getTimeFrames() { return timeFrames; }
+
+    public int getScore() { return score; }
+
+    public void setScore(int score) { this.score = score; }
+
+    public double getMouseX() { return mouseX; }
+
+    public double getMouseY() { return mouseY; }
 }

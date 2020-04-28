@@ -2,11 +2,13 @@ package com.objects;
 
 import com.controllers.ENUM;
 import com.controllers.GameObject;
+import com.gui.Game;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 public abstract class Object implements GameObject {
 
@@ -20,19 +22,24 @@ public abstract class Object implements GameObject {
    private boolean sliced;
    private boolean movedOffScreen;
    private BufferedImage[] bufferedImages;
+   private int timeCreated;
 
    
    public Object(ENUM objectType, int points) {
+      Game game = Game.getInstance();
+      Random random = new Random();
+
       this.points = points;
       this.objectType = objectType;
-      this.xLocation = 0;
-      this.yLocation = 0;
-      this.maxHeight = 30;
+      this.xLocation = random.nextInt((int) game.getGameScene().getWidth() - 50);
+      this.yLocation = (int) game.getGameScene().getHeight();
+      this.maxHeight = (int) (game.getGameScene().getHeight() - 60);
       this.initialVelocity = -5;
       this.fallingVelocity = 5;
       this.sliced = false;
       this.movedOffScreen = false;
       this.bufferedImages = new BufferedImage[2];
+      this.timeCreated = game.getTimeFrames();
 
       try {
          bufferedImages[0] = ImageIO.read(new File("Images\\" + objectType + ".png"));
@@ -69,22 +76,21 @@ public abstract class Object implements GameObject {
    @Override
    public void slice() {
       sliced = true;
-
       // get score from gui
-      int score = 0;
-      score+= points;
-
+      Game game = Game.getInstance();
+      game.setScore(game.getScore() + points);
       // override in bombs to subtract life or end game
 
    }
 
    @Override
    public void move(double time) {
-      double timeOfMaxHeight = maxHeight / initialVelocity;
-      if(time < timeOfMaxHeight)
-         yLocation+= initialVelocity * time;
-      else if(time > timeOfMaxHeight)
-         yLocation+= fallingVelocity * time;
+      double timeOfMaxHeight = -(maxHeight/initialVelocity);
+      double deltaTime = time - timeCreated;
+      if(deltaTime <= timeOfMaxHeight)
+         yLocation = (maxHeight + 60) + (int) (initialVelocity * deltaTime);
+      else if(deltaTime > timeOfMaxHeight)
+         yLocation = (int) (fallingVelocity * deltaTime) - (maxHeight - 60);
    }
 
    @Override
