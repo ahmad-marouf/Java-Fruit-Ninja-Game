@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 
+import com.levels.Difficulty;
 import javafx.animation.AnimationTimer;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
@@ -38,6 +39,8 @@ public class Game {
     private double mouseY;
     private double spawnRate;
     private static Game instance;
+    private Difficulty difficulty;
+
 
     public void startGame(Stage primaryStage) {
         Pane gameLayout = new Pane();
@@ -59,7 +62,7 @@ public class Game {
         Pane objectPane = new Pane();
 
         //Add Create Objects every time interval and display image
-        spawnRate = 1000;
+        spawnRate = difficulty.getSpawnRate();
         timeSeconds = 0;
         timeFrames = 0;
         GameController gameController = new GameController();
@@ -147,4 +150,12 @@ public class Game {
     public double getMouseX() { return mouseX; }
 
     public double getMouseY() { return mouseY; }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
 }

@@ -15,33 +15,12 @@ public class GameController implements GameActions {
 
     @Override
     public GameObject createGameObject() {
+        ENUM objectType;
         Random random = new Random();
         ObjectFactory factory = new ObjectFactory();
-        GameObject gameObject = null;
-        switch (random.nextInt(ENUM.values().length) + 1) {
-            case 1:
-               gameObject = factory.getGameObject(ENUM.APPLE);
-                break;
-            case 2:
-                gameObject = factory.getGameObject(ENUM.ORANGE);
-                break;
-            case 3:
-                gameObject = factory.getGameObject(ENUM.STRAWBERRY);
-                break;
-            case 4:
-                gameObject = factory.getGameObject(ENUM.WATERMELON);
-                break;
-            case 5:
-                gameObject = factory.getGameObject(ENUM.PINEAPPLE);
-                break;
-            case 6:
-                gameObject = factory.getGameObject(ENUM.FATAL);
-                break;
-            case 7:
-                gameObject = factory.getGameObject(ENUM.DANGEROUS);
-                break;
+        objectType = ENUM.values()[random.nextInt(ENUM.values().length)];
+        GameObject gameObject = factory.getGameObject(objectType);
 
-        }
         return gameObject;
     }
 

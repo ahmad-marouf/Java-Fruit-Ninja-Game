@@ -34,8 +34,8 @@ public abstract class Object implements GameObject {
       this.xLocation = random.nextInt((int) game.getGameScene().getWidth() - 50);
       this.yLocation = (int) game.getGameScene().getHeight();
       this.maxHeight = (int) (game.getGameScene().getHeight() - 60);
-      this.initialVelocity = 5;
-      this.fallingVelocity = -5;
+      this.initialVelocity = game.getDifficulty().getInitialVelocity();
+      this.fallingVelocity = game.getDifficulty().getFinalVelocity();
       this.sliced = false;
       this.movedOffScreen = false;
       this.bufferedImages = new BufferedImage[2];
