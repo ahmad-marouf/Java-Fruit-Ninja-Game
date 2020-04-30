@@ -6,6 +6,7 @@ import com.controllers.GameObject;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -22,6 +23,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import javax.xml.bind.JAXBException;
 
 public class Game {
 
@@ -60,6 +63,7 @@ public class Game {
         timeSeconds = 0;
         timeFrames = 0;
         GameController gameController = new GameController();
+
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(spawnRate), e -> {
             timeSeconds += spawnRate /1000;
