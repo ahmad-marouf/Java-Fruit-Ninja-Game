@@ -1,35 +1,57 @@
 package com.objects;
 
 import com.controllers.ENUM;
+import com.controllers.EnumAdapter;
 import com.controllers.GameObject;
 import com.gui.Game;
 
 import javax.imageio.ImageIO;
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-public abstract class Object implements GameObject {
+@XmlRootElement(name = "object")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Object implements GameObject {
 
-   private int points;
+   @XmlJavaTypeAdapter(EnumAdapter.class)
+   @XmlElement(name = "objectType")
    private ENUM objectType;
+   @XmlElement(name = "xLocation")
    private int xLocation;
+   @XmlElement(name = "yLocation")
    private int yLocation;
+   @XmlElement(name = "maxHeight")
    private int maxHeight;
+   @XmlElement(name = "initialVelocity")
    private int initialVelocity;
+   @XmlElement(name = "fallingVelocity")
    private int fallingVelocity;
+   @XmlElement(name = "sliced")
    private boolean sliced;
+   @XmlElement(name = "movedOffScreen")
    private boolean movedOffScreen;
+   @XmlElement(name = "bufferedImages")
    private BufferedImage[] bufferedImages;
+   @XmlElement(name = "timeCreated")
    private int timeCreated;
 
-   
-   public Object(ENUM objectType, int points) {
+   public Object(){
+      this.bufferedImages = new BufferedImage[2];
+      try {
+         bufferedImages[0] = ImageIO.read(new File("Images\\" + objectType.name() + ".png"));
+         bufferedImages[1] = ImageIO.read(new File("Images\\Sliced" + objectType.name() + ".png"));
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+   }
+   public Object(ENUM objectType) {
       Game game = Game.getInstance();
       Random random = new Random();
 
-      this.points = points;
       this.objectType = objectType;
       this.xLocation = random.nextInt((int) game.getGameScene().getWidth() - 50);
       this.yLocation = (int) game.getGameScene().getHeight();
@@ -39,7 +61,7 @@ public abstract class Object implements GameObject {
       this.sliced = false;
       this.movedOffScreen = false;
       this.bufferedImages = new BufferedImage[2];
-      this.timeCreated = game.getTimeFrames();
+      this.timeCreated = game.getGameState().getTimeFrames();
 
       try {
          bufferedImages[0] = ImageIO.read(new File("Images\\" + objectType + ".png"));
@@ -76,11 +98,6 @@ public abstract class Object implements GameObject {
    @Override
    public void slice() {
       sliced = true;
-      // get score from gui
-      Game game = Game.getInstance();
-      game.setScore(game.getScore() + points);
-      // override in bombs to subtract life or end game
-
    }
 
    @Override
@@ -91,6 +108,8 @@ public abstract class Object implements GameObject {
          yLocation = (maxHeight + 60) - (int) (initialVelocity * deltaTime);
       else if(deltaTime > timeOfMaxHeight)
          yLocation = (60 - maxHeight) - (int) (fallingVelocity * deltaTime) ;
+      if (yLocation > (maxHeight+60))
+         movedOffScreen = true;
    }
 
    @Override

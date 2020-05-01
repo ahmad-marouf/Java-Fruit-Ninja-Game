@@ -3,12 +3,12 @@ package com.levels;
 public class Medium implements Difficulty {
     @Override
     public int getInitialVelocity() {
-        return 0;
+        return 7;
     }
 
     @Override
     public int getFinalVelocity() {
-        return 7;
+        return -7;
     }
 
     @Override

@@ -20,15 +20,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a02cc61-efa3-4025-9c84-259d552edaec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/levels/Difficulty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/levels/Easy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/levels/Hard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/levels/Medium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/controllers/EnumAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/controllers/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/controllers/Memento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/controllers/RemoteControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/controllers/commands/ICommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/controllers/commands/RemoveLifeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/objects/Fruit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/PINEAPPLE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/PINEAPPLE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/STRAWBERRY.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/STRAWBERRY.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SlicedPINEAPPLE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/SlicedPINEAPPLE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/Game$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/controllers/ENUM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/controllers/ENUM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/controllers/GameActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/controllers/GameActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/controllers/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/controllers/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Apple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Apple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/DangerousBomb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/DangerousBomb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/FatalBomb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/FatalBomb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Object.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Object.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Orange.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Orange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Pineapple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Pineapple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Strawberry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Strawberry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Watermelon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/objects/Watermelon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controllers/ENUM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controllers/ENUM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controllers/GameActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controllers/GameActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controllers/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/Scores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/controllers/Scores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/levels/Easy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/levels/Easy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/levels/Hard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/levels/Hard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/levels/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/levels/Medium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/objects/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/objects/DangerousBomb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/DangerousBomb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/objects/FatalBomb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/FatalBomb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/objects/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/objects/Orange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/Orange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/objects/Pineapple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/Pineapple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/objects/Strawberry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/Strawberry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/objects/Watermelon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/objects/Watermelon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +71,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -54,10 +88,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fruit Ninja Testing/src/GUI/Game.java" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../Fruit Ninja Testing/src/GUI/Game.java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.controllers.commands" />
+      <recent name="com.controllers" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -65,7 +107,7 @@
       <module name="Fruit Ninja Game" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gui.*" />
+          <option name="PATTERN" value="com.controllers.commands.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,41 +139,74 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1588202183517">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1588313031180">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588202183517" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1588278332263">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588313031180" />
+    <state x="566" y="297" width="403" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588312556618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1588278332263" />
-    <state x="549" y="129" key="FileChooserDialogImpl" timestamp="1588195986507">
+    <state x="566" y="297" width="403" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1588312556618" />
+    <state x="303" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588315279239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="129" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588195986507" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588278210021">
+    <state x="303" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1588315279238" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588288121206">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588278210021" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1588278210021">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588288121206" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1588280642589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588278210021" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1588278210021">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1588280642589" />
+    <state x="549" y="129" key="FileChooserDialogImpl" timestamp="1588280569683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588278210021" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1588278210021">
+    <state x="549" y="129" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588280569683" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588315570758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588278210021" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588315570758" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1588315570758">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588315570758" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1588315570757">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588315570757" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1588315570758">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588315570758" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1588315486974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588315486974" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1588315486974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588315486974" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1588315486973">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588315486973" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1588315486974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588315486974" />
+    <state x="277" y="54" key="SettingsEditor" timestamp="1588309219678">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588309219678" />
   </component>
 </project>

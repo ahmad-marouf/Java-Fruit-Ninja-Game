@@ -3,12 +3,12 @@ package com.levels;
 public class Hard implements Difficulty {
     @Override
     public int getInitialVelocity() {
-        return 0;
+        return 8;
     }
 
     @Override
     public int getFinalVelocity() {
-        return 9;
+        return -8;
     }
 
     @Override

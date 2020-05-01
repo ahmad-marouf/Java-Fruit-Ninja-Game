@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameState>
+    <state>
+        <object>
+            <objectType>STRAWBERRY</objectType>
+            <xLocation>437</xLocation>
+            <yLocation>205</yLocation>
+            <maxHeight>340</maxHeight>
+            <initialVelocity>5</initialVelocity>
+            <fallingVelocity>-5</fallingVelocity>
+            <sliced>false</sliced>
+            <movedOffScreen>false</movedOffScreen>
+            <bufferedImages>
+                <data/>
+            </bufferedImages>
+            <bufferedImages>
+                <data/>
+            </bufferedImages>
+            <timeCreated>103</timeCreated>
+        </object>
+        <object>
+            <objectType>FATAL</objectType>
+            <xLocation>63</xLocation>
+            <yLocation>170</yLocation>
+            <maxHeight>340</maxHeight>
+            <initialVelocity>5</initialVelocity>
+            <fallingVelocity>-5</fallingVelocity>
+            <sliced>true</sliced>
+            <movedOffScreen>false</movedOffScreen>
+            <bufferedImages>
+                <data/>
+            </bufferedImages>
+            <bufferedImages>
+                <data/>
+            </bufferedImages>
+            <timeCreated>154</timeCreated>
+        </object>
+        <timeSeconds>3</timeSeconds>
+        <timeFrames>200</timeFrames>
+        <score>0</score>
+        <lives>2</lives>
+        <spawnRate>1000.0</spawnRate>
+        <difficulty>Easy</difficulty>
+    </state>
+</GameState>

@@ -29,6 +29,6 @@ public interface GameActions {
     /*
      *resets the game to its initial state
      */
-    public void ResetGame ();
+    public void resetGame ();
 
 }
