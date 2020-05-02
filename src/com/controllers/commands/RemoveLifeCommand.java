@@ -11,6 +11,6 @@ public class RemoveLifeCommand implements ICommand {
 
     @Override
     public void execute() {
-        game.removeLife(game.getLivesDisplay());
+        game.removeLife();
     }
 }

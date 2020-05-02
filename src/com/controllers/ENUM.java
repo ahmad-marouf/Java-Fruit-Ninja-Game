@@ -2,8 +2,8 @@ package com.controllers;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "objectType")
 @XmlEnum(String.class)
+@XmlRootElement(name = "objectType")
 @XmlAccessorType(XmlAccessType.FIELD)
 public enum ENUM {
     @XmlEnumValue("APPLE")
@@ -16,6 +16,10 @@ public enum ENUM {
     WATERMELON("WATERMELON"),
     @XmlEnumValue("PINEAPPLE")
     PINEAPPLE("PINEAPPLE"),
+    @XmlEnumValue("STARFRUIT")
+    STARFRUIT("STARFRUIT"),
+    @XmlEnumValue("DRAGONFRUIT")
+    DRAGONFRUIT("DRAGONFRUIT"),
     @XmlEnumValue("FATAL")
     FATAL("FATAL"),
     @XmlEnumValue("DANGEROUS")
@@ -27,7 +31,7 @@ public enum ENUM {
         this.value = value;
     }
 
-    public String Value() { return value;}
+    public String getValue() { return value;}
 
     public static ENUM fromValue(String v) {
         for (ENUM c: ENUM.values()) {

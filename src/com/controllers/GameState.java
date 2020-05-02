@@ -14,6 +14,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GameState {
 
+    @XmlElement(name = "player")
+    private String player;
     @XmlElement(name = "object")
     private List<Object> gameObjectList;
     @XmlElement(name = "timeSeconds")
@@ -45,6 +47,10 @@ public class GameState {
     public Memento save() {
         return new Memento(this);
     }
+
+    public String getPlayer() { return player; }
+
+    public void setPlayer(String player) { this.player = player; }
 
     public List<Object> getGameObjectList() { return gameObjectList; }
 

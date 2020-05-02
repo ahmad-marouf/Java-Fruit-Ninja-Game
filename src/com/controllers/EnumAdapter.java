@@ -6,7 +6,7 @@ public class EnumAdapter extends XmlAdapter<String,ENUM> {
     @Override
     public ENUM unmarshal(String value) throws Exception {
         if (value.equalsIgnoreCase("APPLE"))
-        return ENUM.APPLE;
+            return ENUM.APPLE;
         else if (value.equalsIgnoreCase("ORANGE"))
             return ENUM.ORANGE;
         else if (value.equalsIgnoreCase("STRAWBERRY"))

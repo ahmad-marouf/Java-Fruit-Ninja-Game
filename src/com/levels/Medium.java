@@ -15,4 +15,9 @@ public class Medium implements Difficulty {
     public int getSpawnRate() {
         return 700;
     }
+
+    @Override
+    public String toString() {
+        return "Medium";
+    }
 }

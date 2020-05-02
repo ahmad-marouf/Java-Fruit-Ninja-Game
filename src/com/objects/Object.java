@@ -14,11 +14,9 @@ import java.io.IOException;
 import java.util.Random;
 
 @XmlRootElement(name = "object")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.NONE)
 public class Object implements GameObject {
 
-   @XmlJavaTypeAdapter(EnumAdapter.class)
-   @XmlElement(name = "objectType")
    private ENUM objectType;
    @XmlElement(name = "xLocation")
    private int xLocation;
@@ -34,7 +32,7 @@ public class Object implements GameObject {
    private boolean sliced;
    @XmlElement(name = "movedOffScreen")
    private boolean movedOffScreen;
-   @XmlElement(name = "bufferedImages")
+//   @XmlElement(name = "bufferedImages")
    private BufferedImage[] bufferedImages;
    @XmlElement(name = "timeCreated")
    private int timeCreated;
@@ -42,8 +40,8 @@ public class Object implements GameObject {
    public Object(){
       this.bufferedImages = new BufferedImage[2];
       try {
-         bufferedImages[0] = ImageIO.read(new File("Images\\" + objectType.name() + ".png"));
-         bufferedImages[1] = ImageIO.read(new File("Images\\Sliced" + objectType.name() + ".png"));
+         bufferedImages[0] = ImageIO.read(new File("Images\\" + getObjectType() + ".png"));
+         bufferedImages[1] = ImageIO.read(new File("Images\\Sliced" + getObjectType() + ".png"));
       } catch (IOException e) {
          e.printStackTrace();
       }
@@ -71,6 +69,8 @@ public class Object implements GameObject {
       }
    }
 
+   @XmlElement(name = "objectType")
+   @XmlJavaTypeAdapter(EnumAdapter.class)
    @Override
    public ENUM getObjectType() { return objectType; }
 

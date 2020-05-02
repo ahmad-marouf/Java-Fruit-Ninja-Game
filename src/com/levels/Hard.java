@@ -15,4 +15,9 @@ public class Hard implements Difficulty {
     public int getSpawnRate() {
         return 500;
     }
+
+    @Override
+    public String toString() {
+        return "Hard";
+    }
 }
