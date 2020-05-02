@@ -43,6 +43,7 @@ public class MainMenu extends Application {
         mainMenu.setTextFill(Color.WHITE);
         Button play = new Button("PLAY");
         Button HighScores = new Button("HIGH SCORES");
+        Button Instructions = new Button("Instructions");
         Button Exit = new Button("EXIT");
 
         ChoiceBox<String> difficultySelection = new ChoiceBox<>();
@@ -56,6 +57,9 @@ public class MainMenu extends Application {
 
         VBox playerBox = getPlayers();
 
+        ScoreBoard scoreBoard = new ScoreBoard();
+        Instructions instructions = new Instructions();
+
         play.setOnAction(e -> {
             Difficulty difficulty = getDifficulty(difficultySelection.getSelectionModel().getSelectedItem());
             game.setPrimaryStage(primaryStage);
@@ -65,13 +69,25 @@ public class MainMenu extends Application {
                 game.getGameState().setPlayer("Guest");
             game.startGame();
         });
-        // HighScores.setOnAction(e->{
+         HighScores.setOnAction(e->{
+             try {
+                 scoreBoard.start(primaryStage);
+             } catch (Exception exception) {
+                 exception.printStackTrace();
+             }
+         });
+         Instructions.setOnAction(e->{
+             try {
+                 instructions.start(primaryStage);
+             } catch (Exception exception) {
+                 exception.printStackTrace();
+             }
+         });
 
-        //});
         Exit.setOnAction(e -> {
             primaryStage.close();
         });
-        menuButtons.getChildren().addAll(mainMenu, gameStart, playerBox, HighScores, Exit);
+        menuButtons.getChildren().addAll(mainMenu, gameStart, playerBox, HighScores,Instructions, Exit);
         menuButtons.setAlignment(Pos.CENTER);
         primaryStage.setScene(menuScene);
         primaryStage.show();

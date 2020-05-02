@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <players>
-    <player>Ahmad</player>
-    <player>player2</player>
+    <player>
+        Ahmad
+    </player>
+    <player>
+        player2
+    </player>
+    <player>
+        Hadeir
+    </player>
 </players>
