@@ -136,14 +136,18 @@ public class MainMenu extends Application {
         });
 
         addPlayer.setOnAction(e ->{
-            try {
-                players.add(newPlayerName.getText());
-                selectPlayer.getItems().add(newPlayerName.getText());
-                selectPlayer.setValue(newPlayerName.getText());
-                Game.getInstance().getGameState().setPlayer(newPlayerName.getText());
-            } catch (JAXBException ex) {
-                ex.printStackTrace();
+            if (!newPlayerName.getText().isEmpty()) {
+                try {
+                    players.add(newPlayerName.getText());
+                    selectPlayer.getItems().add(newPlayerName.getText());
+                    selectPlayer.setValue(newPlayerName.getText());
+                    Game.getInstance().getGameState().setPlayer(newPlayerName.getText());
+                } catch (JAXBException ex) {
+                    ex.printStackTrace();
+                }
             }
+            else
+                selectPlayer.setValue("Guest");
             playerBox.getChildren().remove(newPlayerBox);
         });
 

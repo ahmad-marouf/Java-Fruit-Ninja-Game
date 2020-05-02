@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Fruit Ninja Game:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -27,10 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a02cc61-efa3-4025-9c84-259d552edaec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/gui/Instructions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gui/ScoreBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Fruit_Ninja_Game_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameState.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/Instructions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit Ninja Game/com/GUI/Instructions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/players.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/MainMenu.java" afterDir="false" />
@@ -61,9 +67,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../Fruit Ninja Testing/src/GUI/Game.java" />
   </component>
@@ -118,18 +124,27 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="70" key="#Project_Structure" timestamp="1588450026247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1588450026247" />
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1588400913601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588400913601" />
+    <state x="499" y="195" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588449934655">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="195" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1588449934655" />
     <state x="566" y="297" width="433" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588428922086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -154,22 +169,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="129" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588425151267" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588436511883">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588450329269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588436511883" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1588436511883">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588450329269" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1588450329269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588436511883" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1588436511883">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588450329269" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1588450329269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588436511883" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1588436511883">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588450329269" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1588450329269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588436511883" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588450329269" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1588315773151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
