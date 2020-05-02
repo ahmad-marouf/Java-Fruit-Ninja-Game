@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?><scores><score><points>2550</points><name>
         Hadeir
-    </name><difficulty>Easy</difficulty></score><score><points>1330</points><name>
+    </name><difficulty>Easy</difficulty></score><score><points>1420</points><name>
+        Ahmad
+    </name><difficulty>Hard</difficulty></score><score><points>1330</points><name>
             Guest
         </name><difficulty>
             Medium
@@ -28,10 +30,6 @@
             Medium
         </difficulty></score><score><points>530</points><name>
             Guest
-        </name><difficulty>
-            Medium
-        </difficulty></score><score><points>530</points><name>
-            Hadeir
         </name><difficulty>
             Medium
         </difficulty></score></scores>
