@@ -109,6 +109,7 @@ public class Game {
         mediaPlayer.play();
 
 
+        //seperate timeline so spawnRate doesn't affect time counter
         timeCounter = new Timeline(new KeyFrame(Duration.millis(1000), e1 -> {
             gameState.setTimeSeconds(gameState.getTimeSeconds() + 1);
             timeLabel.setText("Time: "+ gameState.getTimeSeconds());
@@ -182,6 +183,7 @@ public class Game {
 
         gameLayout.setOnMouseEntered(e ->{
             pauseButton.setOnAction(e1 -> {
+                timeCounter.pause();
                 timeline.pause();
                 timer.stop();
                 objectPane.setOpacity(0.5);
@@ -306,6 +308,7 @@ public class Game {
 
         resumeGameButton.setOnAction(e -> {
             timeline.play();
+            timeCounter.play();
             timer.start();
             gameLayout.getChildren().remove(gameLayout.getChildren().size()-1);
             objectPane.setOpacity(1);
